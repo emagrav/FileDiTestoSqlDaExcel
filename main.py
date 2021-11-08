@@ -99,7 +99,7 @@ def write_sql_file(entity
             else:
                 current_block =  "********************************************"
                 current_block += "******        Unknown entity!       ********"
-                current_block += "******   Know entities: 'D' or 'U'  ********"
+                current_block += "******   Known entities: 'D' or 'U' ********"
                 current_block += "********************************************" 
                 break
 
@@ -128,7 +128,7 @@ def run():
     excel_file_path_in = autorita_files_path + 'in/excel/Domini autorità.xlsx'
     excel_sheet_title = "Domini autorità"
     sql_file_path_out = autorita_files_path + 'out/add_domain_AUTORITA_PL.sql'
-    header_template_path =  autorita_files_path + 'in/sql_templates/domains_header.sql'
+    header_template_path = autorita_files_path + 'in/sql_templates/domains_header.sql'
     header_template = get_template(header_template_path)
     block_template_path =  autorita_files_path + 'in/sql_templates/domains_block.sql'
     block_template = get_template(block_template_path)
@@ -147,9 +147,9 @@ def run():
     excel_file_path_in = autorita_files_path + 'in/excel/CF autorità.xlsx'
     excel_sheet_title = "Autorità_primo inserimento"
     sql_file_path_out = autorita_files_path + 'out/add_utenti_autorita.sql'
-    header_template_path =  autorita_files_path + 'in/sql_templates/users_header.sql'
+    header_template_path = autorita_files_path + 'in/sql_templates/users_header.sql'
     header_template = get_template(header_template_path)
-    block_template_path =  autorita_files_path + 'in/sql_templates/users_block.sql'
+    block_template_path = autorita_files_path + 'in/sql_templates/users_block.sql'
     block_template = get_template(block_template_path)
     
     write_sql_file(entity
@@ -162,6 +162,6 @@ def run():
                 )
 
 if __name__ == "__main__":
-    print("Inizio elaorazione:", datetime.today().strftime('%d-%m-%Y %H:%M'))
+    print("Inizio elaorazione:", datetime.today().strftime('%d-%m-%Y %H:%M')) # dd-mm-YYYY HH:MI
     run()
     print("Fine elaorazione:", datetime.today().strftime('%d-%m-%Y %H:%M'))
