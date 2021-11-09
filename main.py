@@ -85,7 +85,7 @@ def write_sql_file(entity
                 role_id = row[2].value
                 tmstmp = str(row[3].value)
                 end_date = tmstmp[8:10] + "/" + tmstmp[5:7] + "/" + tmstmp[0:4]
-                start_date = "10-11-2021"
+                start_date = "09-11-2021"
                 notes = row[4].value
                 
                 current_block = block_template.format(
